@@ -13,12 +13,13 @@ var remove = ['are', 'is', 'where', 'was', 'the', 'be', 'to', 'of', 'the', 'be',
 //var remove2 = ['programming', 'computer'];			  
 
 var div = '#content';
+var top	= 25;
 			  
 var words = getDivWords(div);
 var wordCount = countWords(words, remove); 
 var wordCountSorted = Object.keys(wordCount).sort(function(a,b){return wordCount[b]-wordCount[a]}); //sort words by # of occurrences desc
 
-replaceWords(wordCountSorted, div, 25);
+replaceWords(wordCountSorted, div, top);
 
 //get words from a div
 function getDivWords(div){
